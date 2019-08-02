@@ -1,2 +1,2 @@
-# Leetcode & HackerRank Assignments
+# Leetcode & HackerRank Problems
  

@@ -18,6 +18,15 @@ class Solution(object):
             curr.next = ListNode(string[i])
             curr = curr.next
         return head
+    def reverseListAlternate(self, head):
+        # Using Runner Technique - Two Pointers
+        prev = None
+        while head:
+            curr = head
+            head = head.next
+            curr.next = prev
+            prev = curr
+        return prev
 
 
 head = ListNode(1)

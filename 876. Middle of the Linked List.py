@@ -4,7 +4,10 @@ class ListNode(object):
         self.next = None
 
 class Solution(object):
-
+    def printList(self, node):
+        while node:
+            print(node.val)
+            node = node.next
     def makeList(self, list):
         curr = ListNode(list[0])
         head = curr
@@ -12,6 +15,12 @@ class Solution(object):
             head.next = ListNode(list[i])
             head = head.next
         return curr
+    def findMiddle(self, head):
+        slow = fast = head
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+        return self.printList(slow)
 
     def middleNode(self, head: ListNode) -> ListNode:
         """
@@ -37,4 +46,4 @@ head.next.next.next = ListNode(4)
 head.next.next.next.next = ListNode(5)
 head.next.next.next.next.next = ListNode(6)
 sol = Solution()
-sol.middleNode(head)
+sol.findMiddle(head)

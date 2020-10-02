@@ -19,6 +19,6 @@ class Solution(object):
         
         return sorted(A)
                 
-A = [-7,-3,2,3,11]
+A = [-7,-3,2,3,11,4]
 Solution.sortedSquares(A)
 
